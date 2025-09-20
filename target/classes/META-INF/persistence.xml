@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             version="3.1"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+                                 https://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd">
+
+    <persistence-unit name="userAdminPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+        <!-- KHAI BÁO RÕ ENTITY -->
+        <class>murach.business.User</class>
+
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:postgresql://dpg-d36m2h7diees73buu2tg-a.oregon-postgres.render.com:5432/murach_email?sslmode=require"/>
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="jakarta.persistence.jdbc.user" value="murach_email_user"/>
+            <property name="jakarta.persistence.jdbc.password" value="uioNr6VheCl4IkmpCKi43OHzi1Q8qGwP"/>
+
+            <property name="jakarta.persistence.schema-generation.database.action" value="none"/>
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+        </properties>
+
+    </persistence-unit>
+</persistence>
