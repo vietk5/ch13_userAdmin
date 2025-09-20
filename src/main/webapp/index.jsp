@@ -29,7 +29,7 @@
                 <td>${user.lastName}</td>
                 <td>${user.email}</td>
                 <td> <a href="userAdmin?action=display_user&amp;email=${user.email}">Update</a></td>
-                <td> <a href="userAdmin?action=delete_user&amp;email=${user.email}">Delete</a></td>
+                <td> <a href="userAdmin?action=delete_user&amp;userId=${user.userId}">Delete</a></td>
             </tr>
             </c:forEach>
             
